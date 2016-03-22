@@ -38,7 +38,7 @@ Freya Hello World (from Introduction to Freya video)
             let! state = Freya.State.get
 
             state.Environment.["owin.ResponseStatusCode"] <- 200
-            state.Environment.["owin.RepsonseReasonPhrase"] <- "Awesome"
+            state.Environment.["owin.ResponseReasonPhrase"] <- "Awesome"
             state.Environment.["owin.ResponseBody"] :?> Stream
                 |> fun x -> x.Write (text, 0, text.Length)
             }
